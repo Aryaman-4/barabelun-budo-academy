@@ -1713,7 +1713,9 @@ button, input, select, textarea {
   bottom: 0;
   width: 100%;
   max-width: 420px;
-  background-color: #FFFFFF;
+  background-color: var(--drawer-bg);
+  color: var(--text-body);
+  border-left: 1px solid var(--border-light);
   z-index: 2001;
   box-shadow: var(--shadow-drawer);
   display: flex;
@@ -1907,6 +1909,74 @@ button, input, select, textarea {
   background-color: #1EBE5B;
 }
 
+/* Dark Theme Overrides for Cart Drawer */
+[data-theme="dark"] .cart-drawer {
+  background-color: #101927 !important;
+  color: #CBD5E1 !important;
+  border-left: 1px solid #223145 !important;
+}
+
+[data-theme="dark"] .cart-header {
+  border-bottom: 1px solid #223145 !important;
+}
+
+[data-theme="dark"] .cart-title-row h3 {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .cart-items-tag {
+  background: #1B293C !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .close-cart-btn {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .close-cart-btn:hover {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .cart-item-row {
+  background-color: #0E1622 !important;
+  border: 1px solid #223145 !important;
+}
+
+[data-theme="dark"] .cart-item-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .cart-item-price {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .qty-btn {
+  background: #1B293C !important;
+  border: 1px solid #2F425B !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .qty-btn:hover {
+  background: #2F425B !important;
+}
+
+[data-theme="dark"] .qty-val {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .cart-footer {
+  background-color: #141F2F !important;
+  border-top: 1px solid #223145 !important;
+}
+
+[data-theme="dark"] .cart-subtotal-val {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .cart-shipping-note {
+  color: #94A3B8 !important;
+}
+
 /* --- PRODUCT DESCRIPTION MODAL --- */
 .product-modal-overlay {
   position: fixed;
@@ -1933,7 +2003,8 @@ button, input, select, textarea {
   max-width: 960px;
   max-height: 90vh;
   overflow-y: auto;
-  background: #FFFFFF;
+  background: var(--modal-bg);
+  color: var(--text-body);
   border-radius: var(--radius-lg);
   z-index: 3001;
   padding: 2.2rem;
@@ -2425,6 +2496,178 @@ button, input, select, textarea {
   color: #94A3B8;
   text-align: center;
   line-height: 1.4;
+}
+
+/* Dark Theme Overrides for Product Details Modal */
+[data-theme="dark"] .product-modal {
+  background: #121B2A !important;
+  color: #CBD5E1 !important;
+  border-color: #223145 !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75) !important;
+}
+
+[data-theme="dark"] .product-modal-close {
+  background: #1E293B !important;
+  border-color: #2F425B !important;
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .product-modal-close:hover {
+  background: #334155 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .prod-modal-img-card {
+  background: #0E1622 !important;
+  border-color: #223145 !important;
+}
+
+[data-theme="dark"] .modal-badge {
+  background: #1B293C !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-kanji-sub {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .modal-photo-wrap,
+[data-theme="dark"] .modal-strap-wrap {
+  background: #131E2C !important;
+  border-color: #223145 !important;
+}
+
+[data-theme="dark"] .modal-authenticity-banner {
+  background: #131E2C !important;
+  border-color: #223145 !important;
+}
+
+[data-theme="dark"] .modal-authenticity-banner strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-authenticity-banner p {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card {
+  background: rgba(41, 173, 178, 0.12) !important;
+  border-color: rgba(56, 189, 248, 0.28) !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card .dojo-card-header strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card .dojo-card-header span {
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card .dojo-card-text {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card .dojo-card-text strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card .dojo-link-chip {
+  background: #162233 !important;
+  color: #F8FAFC !important;
+  border-color: #2F425B !important;
+}
+
+[data-theme="dark"] .modal-dojo-info-card .dojo-link-chip:hover {
+  background: #29ADB2 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .modal-prod-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-price-row {
+  border-color: #223145 !important;
+}
+
+[data-theme="dark"] .modal-curr-price {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-mrp-price {
+  color: #64748B !important;
+}
+
+[data-theme="dark"] .modal-save-pill {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34D399 !important;
+}
+
+[data-theme="dark"] .modal-section-box {
+  background: #0E1622 !important;
+  border-color: #223145 !important;
+}
+
+[data-theme="dark"] .modal-box-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-desc-p {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .modal-specs-list li {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .syllabus-box {
+  background: rgba(245, 158, 11, 0.12) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+[data-theme="dark"] .syllabus-box .modal-box-title {
+  color: #FCD34D !important;
+}
+
+[data-theme="dark"] .curriculum-text {
+  color: #FDE68A !important;
+}
+
+[data-theme="dark"] .modal-order-panel {
+  background: #131E2C !important;
+  border-color: #223145 !important;
+}
+
+[data-theme="dark"] .modal-selector-group label {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .modal-size-select {
+  background: #0B111A !important;
+  color: #F8FAFC !important;
+  border-color: #2F425B !important;
+}
+
+[data-theme="dark"] .modal-qty-control {
+  background: #0B111A !important;
+  border-color: #2F425B !important;
+}
+
+[data-theme="dark"] .modal-qty-btn {
+  background: #1E293B !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-qty-btn:hover {
+  background: #2F425B !important;
+}
+
+[data-theme="dark"] .modal-qty-val {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .modal-footer-note {
+  color: #94A3B8 !important;
 }
 
 /* --- ARTICLE MODAL --- */
