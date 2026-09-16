@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barabelun Budo | Official Karate Belt Store &amp; Dojo Blog</title>
+  <meta name="description" content="Official eCommerce store and blog of Barabelun Budo Martial Arts Academy (Branch of Zanshin Karate-Do Kai). Led by Sensei SK Solaman (Black Belt 1st Dan, Japan). Order belts &amp; read training guides.">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('barabelun_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Modern Clean Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container bar-inner">
+      <div class="bar-left">
+        <span class="pulse-circle"></span>
+        <span>Official Store &amp; Blog &bull; <strong>Barabelun Budo Academy</strong> &bull; Zanshin Karate-Do Kai</span>
+      </div>
+      <div class="bar-right">
+        <span>Chief Instructor: <strong>Sensei SK Solaman</strong> (1st Dan Japan)</span>
+        <span class="dot">&bull;</span>
+        <a href="https://wa.me/918515082913" target="_blank" rel="noopener" class="wa-strip-link">
+          WhatsApp: +91 8515082913
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main eCommerce Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <div class="brand-crest">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" stroke="#1B4965" stroke-width="2"/>
+            <circle cx="18" cy="18" r="12" stroke="#29ADB2" stroke-width="1.5"/>
+            <path d="M18 8V28M11 15H25M13 22H23" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">BARABELUN BUDO</span>
+          <span class="brand-tagline">Karate-Do Store &amp; Blog</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#store" class="nav-link">Belt Store</a></li>
+          <li><a href="#blog" class="nav-link">Dojo Journal</a></li>
+          <li><a href="#sensei" class="nav-link">Sensei</a></li>
+          <li><a href="#schedule" class="nav-link">Classes</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Switcher, Cart Button & Mobile Menu Toggle -->
+      <div class="header-actions">
+        <!-- Modern Theme Mode Switcher -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Switch between light and dark theme" title="Toggle Light / Dark Theme" aria-pressed="false">
+          <span class="theme-pill-track" aria-hidden="true">
+            <span class="theme-pill-thumb">
+              <span class="theme-icon theme-icon-sun">
+                <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+              </span>
+              <span class="theme-icon theme-icon-moon">
+                <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+          <span class="theme-toggle-text" id="themeToggleText">Dark</span>
+        </button>
+
+        <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="Open Shopping Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-count-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="https://wa.me/918515082913" target="_blank" rel="noopener" class="btn btn-teal nav-cta">
+          Direct WhatsApp
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-links">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#store" class="mobile-link">Belt Catalog &amp; Store</a></li>
+        <li><a href="#blog" class="mobile-link">Dojo Blog &amp; Guides</a></li>
+        <li><a href="#sensei" class="mobile-link">Sensei SK Solaman</a></li>
+        <li><a href="#schedule" class="mobile-link">Training Timetable</a></li>
+        <li><a href="#contact" class="mobile-link">Dojo Admissions &amp; Contact</a></li>
+        <li class="mobile-theme-row">
+          <span class="mobile-theme-label">Appearance:</span>
+          <button class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggleBtn" aria-label="Toggle light and dark mode" aria-pressed="false">
+            <span class="theme-pill-track" aria-hidden="true">
+              <span class="theme-pill-thumb">
+                <span class="theme-icon theme-icon-sun">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                  </svg>
+                </span>
+                <span class="theme-icon theme-icon-moon">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            <span class="theme-toggle-text" id="mobileThemeToggleText">Dark</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: ECOMMERCE + DOJO JOURNAL -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-left">
+          <div class="kicker-pill">
+            <span class="kicker-dot"></span>
+            <span>Official Equipment &bull; Zanshin Karate-Do Kai</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            Authentic Karate Belts &amp;<br>
+            <span class="text-teal">Traditional Budo Journal</span>
+          </h1>
+
+          <p class="hero-subtext">
+            Handcrafted heavy-cotton Obi for every rank &mdash; from White Belt to Master Dan. Direct orders dispatched to your doorstep via WhatsApp, guided by <strong>Sensei SK Solaman</strong> (Black Belt 1st Degree, Japan).
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#store" class="btn btn-teal btn-lg">
+              Shop Belt Catalog
+            </a>
+            <a href="#blog" class="btn btn-outline btn-lg">
+              Read Training Guides
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-trust-bar">
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <span>100% Woven Cotton</span>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <span>Dojo Exam Approved</span>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">✓</span>
+              <span>Instant WhatsApp Order</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Product Hero Showcase (Real Belt Image) -->
+        <div class="hero-product-card">
+          <div class="product-badge-float">Dojo Best Seller</div>
+          <div class="hero-img-wrap" onclick="openProductModal('r2-red')" style="cursor:pointer;" title="Click to view full belt details &amp; dojo specs">
+            <img src="assets/images/belt-red-folded.png" 
+                 alt="Official Red Karate Belt - Folded" 
+                 class="hero-featured-img">
+          </div>
+          <div class="hero-product-details">
+            <div class="hero-product-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-text">Official Tournament Grade</span>
+            </div>
+            <h3 class="hero-product-title" onclick="openProductModal('r2-red')" style="cursor:pointer;" title="Click to view full belt details &amp; dojo specs">Tournament Red Kumite Belt (Aka)</h3>
+            <p class="hero-product-sub">Double-stitched colorfast cotton with reinforced core canvas.</p>
+            <div class="hero-price-line">
+              <div class="price-stack">
+                <span class="curr-price">₹320</span>
+                <span class="orig-price">₹399</span>
+              </div>
+              <div style="display:flex; gap:0.4rem; align-items:center;">
+                <button type="button" class="btn btn-outline btn-sm" onclick="openProductModal('r2-red')" style="padding:0.42rem 0.65rem; font-size:0.75rem;">
+                  Specs &amp; Info
+                </button>
+                <button type="button" class="btn btn-teal btn-sm" onclick="quickAddHeroBelt()">
+                  Add to Cart &bull; ₹320
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST GUANRANTEES STRIP -->
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-box">
+          <div class="trust-box-icon">🥋</div>
+          <div>
+            <strong>Heavyweight Pure Cotton</strong>
+            <p>Durable 8 to 12-row tight stitching for longevity</p>
+          </div>
+        </div>
+        <div class="trust-box">
+          <div class="trust-box-icon">📦</div>
+          <div>
+            <strong>Direct Dojo Dispatch</strong>
+            <p>Tested and verified at Barabelun Dojo</p>
+          </div>
+        </div>
+        <div class="trust-box">
+          <div class="trust-box-icon">📜</div>
+          <div>
+            <strong>Zanshin Certified</strong>
+            <p>Meets standard Japanese Kyu and Dan rules</p>
+          </div>
+        </div>
+        <div class="trust-box">
+          <div class="trust-box-icon">💬</div>
+          <div>
+            <strong>1-on-1 Sensei Support</strong>
+            <p>Direct size &amp; delivery assistance on WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOMMERCE BELT CATALOG: 4 DISTINCT COLOR ROWS -->
+    <section class="store-section" id="store">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-tag">OFFICIAL CATALOG</span>
+          <h2 class="section-heading">Karate Belt Collections</h2>
+          <p class="section-desc">
+            Explore authentic martial arts belts organized by color rank progression. Select your size, add to your cart, or click <strong>Order via WhatsApp</strong> for instant single-item ordering.
+          </p>
+        </div>
+
+        <!-- Global Size Sync Bar -->
+        <div class="catalog-size-sync-bar">
+          <div class="sync-info">
+            <strong>Select Standard Length:</strong>
+            <span>Updates length on all cards below.</span>
+          </div>
+          <select id="globalSizePicker" class="sync-select">
+            <option value="Size 2 (220 cm)">Size 2 &mdash; 220 cm (Junior / Child)</option>
+            <option value="Size 3 (240 cm)" selected>Size 3 &mdash; 240 cm (Youth / Standard)</option>
+            <option value="Size 4 (260 cm)">Size 4 &mdash; 260 cm (Adult Regular)</option>
+            <option value="Size 5 (280 cm)">Size 5 &mdash; 280 cm (Adult Large)</option>
+            <option value="Size 6 (300 cm)">Size 6 &mdash; 300 cm (Extra Long / Master)</option>
+          </select>
+        </div>
+
+        <!-- ========================================================
+             ROW 1: TEAL & BLUE COLLECTION
+             Colors: #0D1B2A, #1B4965, #29ADB2, #A8DADC
+             ======================================================== -->
+        <div class="collection-row">
+          <div class="collection-header theme-teal-blue">
+            <div class="col-title-meta">
+              <span class="col-pill">COLLECTION 01</span>
+              <h3>Row 1: Teal &amp; Blue Collection</h3>
+              <span class="col-sub">Foundation dojo grades, standard training belts &amp; advanced blue Kyu ranks</span>
+            </div>
+            <div class="swatches-strip">
+              <span class="swatch" style="background:#0D1B2A" title="#0D1B2A (Dark Navy)"></span>
+              <span class="swatch" style="background:#1B4965" title="#1B4965 (Deep Indigo)"></span>
+              <span class="swatch" style="background:#29ADB2" title="#29ADB2 (Teal)"></span>
+              <span class="swatch" style="background:#A8DADC" title="#A8DADC (Celeste)"></span>
+            </div>
+          </div>
+
+          <div class="products-grid-4">
+            <!-- 1.1 -->
+            <div class="product-item" data-id="r1-navy" data-name="Rich Navy Kyu Belt" data-price="340" data-color="#0D1B2A">
+              <div class="prod-img-box" onclick="openProductModal('r1-navy')" style="background:#EBF3F8;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#0D1B2A; color:#A8DADC;">
+                  <span class="stitch-line"></span><span>空手</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#E2ECF3; color:#0D1B2A;">Navy Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r1-navy')" title="Click to view full belt details &amp; dojo specs">Rich Navy Kyu Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹340</span>
+                  <span class="mrp-price">₹420</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r1-navy')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1.2 -->
+            <div class="product-item" data-id="r1-indigo" data-name="Deep Indigo Karate Belt" data-price="320" data-color="#1B4965">
+              <div class="prod-img-box" onclick="openProductModal('r1-indigo')" style="background:#EBF3F8;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#1B4965; color:#FFFFFF;">
+                  <span class="stitch-line"></span><span>残心</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#E0EBF2; color:#1B4965;">4th Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r1-indigo')" title="Click to view full belt details &amp; dojo specs">Deep Indigo Karate Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹320</span>
+                  <span class="mrp-price">₹390</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r1-indigo')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1.3 -->
+            <div class="product-item" data-id="r1-teal" data-name="Light Sea Green Belt" data-price="300" data-color="#29ADB2">
+              <div class="prod-img-box" onclick="openProductModal('r1-teal')" style="background:#EBF3F8;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#29ADB2; color:#0D1B2A;">
+                  <span class="stitch-line"></span><span>武道</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#E0F5F6; color:#177C81;">Teal Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r1-teal')" title="Click to view full belt details &amp; dojo specs">Light Sea Green Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹300</span>
+                  <span class="mrp-price">₹360</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r1-teal')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1.4 -->
+            <div class="product-item" data-id="r1-celeste" data-name="Celeste Pale Cyan Belt" data-price="290" data-color="#A8DADC">
+              <div class="prod-img-box" onclick="openProductModal('r1-celeste')" style="background:#EBF3F8;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#A8DADC; color:#1B4965;">
+                  <span class="stitch-line"></span><span>基本</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#E8F7F8; color:#2F7578;">Sky Rank</span>
+                <h4 class="prod-title" onclick="openProductModal('r1-celeste')" title="Click to view full belt details &amp; dojo specs">Celeste Pale Cyan Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹290</span>
+                  <span class="mrp-price">₹350</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r1-celeste')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================
+             ROW 2: WARM SUNSET COLLECTION (FEATURING REAL BELT PHOTO)
+             Colors: #E94F37, #F9844A, #F9C74F, #FDD9B5
+             ======================================================== -->
+        <div class="collection-row">
+          <div class="collection-header theme-sunset">
+            <div class="col-title-meta">
+              <span class="col-pill">COLLECTION 02</span>
+              <h3>Row 2: Warm Sunset Collection</h3>
+              <span class="col-sub">Fiery beginner and junior ranks, competition belts &amp; energetic progress stages</span>
+            </div>
+            <div class="swatches-strip">
+              <span class="swatch" style="background:#E94F37" title="#E94F37 (Fiery Red)"></span>
+              <span class="swatch" style="background:#F9844A" title="#F9844A (Sunset Orange)"></span>
+              <span class="swatch" style="background:#F9C74F" title="#F9C74F (Golden Yellow)"></span>
+              <span class="swatch" style="background:#FDD9B5" title="#FDD9B5 (Warm Peach)"></span>
+            </div>
+          </div>
+
+          <div class="products-grid-4">
+            <!-- 2.1 REAL PHOTO FOLDED RED BELT -->
+            <div class="product-item featured-item" data-id="r2-red" data-name="Crimson Red Kumite Belt (Aka)" data-price="320" data-color="#E94F37">
+              <div class="prod-badge-mini">Real Photo</div>
+              <div class="prod-img-box real-photo-box" onclick="openProductModal('r2-red')" title="Click to view full belt details &amp; dojo specs">
+                <img src="assets/images/belt-red-folded.png" alt="Official Red Karate Belt" class="real-belt-thumb">
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#FCEBE8; color:#B9301B;">Tournament Aka</span>
+                <h4 class="prod-title" onclick="openProductModal('r2-red')" title="Click to view full belt details &amp; dojo specs">Crimson Red Kumite Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹320</span>
+                  <span class="mrp-price">₹399</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r2-red')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.2 REAL PHOTO HANGING RED/ORANGE -->
+            <div class="product-item" data-id="r2-orange" data-name="Sunset Orange Karate Belt" data-price="290" data-color="#F9844A">
+              <div class="prod-badge-mini">Real Photo</div>
+              <div class="prod-img-box real-photo-box" onclick="openProductModal('r2-orange')" title="Click to view full belt details &amp; dojo specs">
+                <img src="assets/images/belt-red-hanging.png" alt="Hanging Karate Belt" class="real-belt-thumb" style="filter: hue-rotate(25deg);">
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#FDEFE8; color:#D1581C;">7th-8th Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r2-orange')" title="Click to view full belt details &amp; dojo specs">Sunset Orange Karate Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹290</span>
+                  <span class="mrp-price">₹350</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r2-orange')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.3 -->
+            <div class="product-item" data-id="r2-yellow" data-name="Golden Yellow Karate Belt" data-price="270" data-color="#F9C74F">
+              <div class="prod-img-box" onclick="openProductModal('r2-yellow')" style="background:#FDF8ED;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#F9C74F; color:#574005;">
+                  <span class="stitch-line"></span><span>基本</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#FDF6E3; color:#9C720B;">9th Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r2-yellow')" title="Click to view full belt details &amp; dojo specs">Golden Yellow Karate Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹270</span>
+                  <span class="mrp-price">₹340</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r2-yellow')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.4 -->
+            <div class="product-item" data-id="r2-peach" data-name="Warm Peach Beginner Belt" data-price="260" data-color="#FDD9B5">
+              <div class="prod-img-box" onclick="openProductModal('r2-peach')" style="background:#FDF8ED;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#FDD9B5; color:#733E10;">
+                  <span class="stitch-line"></span><span>初心</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#FFF5EC; color:#9C5720;">Junior Rank</span>
+                <h4 class="prod-title" onclick="openProductModal('r2-peach')" title="Click to view full belt details &amp; dojo specs">Warm Peach Beginner Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹260</span>
+                  <span class="mrp-price">₹320</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r2-peach')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================
+             ROW 3: PURPLE GRADIENT COLLECTION
+             Colors: #5E4B8B, #7D6CC4, #B9A7E0, #E7D6F7
+             ======================================================== -->
+        <div class="collection-row">
+          <div class="collection-header theme-purple">
+            <div class="col-title-meta">
+              <span class="col-pill">COLLECTION 03</span>
+              <h3>Row 3: Purple Gradient Collection</h3>
+              <span class="col-sub">Intermediate Kyu progression, senior student rankings &amp; refined technical proficiency</span>
+            </div>
+            <div class="swatches-strip">
+              <span class="swatch" style="background:#5E4B8B" title="#5E4B8B (Deep Purple)"></span>
+              <span class="swatch" style="background:#7D6CC4" title="#7D6CC4 (Royal Violet)"></span>
+              <span class="swatch" style="background:#B9A7E0" title="#B9A7E0 (Soft Lilac)"></span>
+              <span class="swatch" style="background:#E7D6F7" title="#E7D6F7 (Pale Lavender)"></span>
+            </div>
+          </div>
+
+          <div class="products-grid-4">
+            <!-- 3.1 -->
+            <div class="product-item" data-id="r3-purple" data-name="Deep Imperial Purple Belt" data-price="360" data-color="#5E4B8B">
+              <div class="prod-img-box" onclick="openProductModal('r3-purple')" style="background:#F6F4FB;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#5E4B8B; color:#FFFFFF;">
+                  <span class="stitch-line"></span><span>形</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#ECE7F5; color:#5E4B8B;">3rd Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r3-purple')" title="Click to view full belt details &amp; dojo specs">Deep Imperial Purple Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹360</span>
+                  <span class="mrp-price">₹440</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r3-purple')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3.2 -->
+            <div class="product-item" data-id="r3-violet" data-name="Royal Violet Karate Belt" data-price="340" data-color="#7D6CC4">
+              <div class="prod-img-box" onclick="openProductModal('r3-violet')" style="background:#F6F4FB;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#7D6CC4; color:#FFFFFF;">
+                  <span class="stitch-line"></span><span>道</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#EFEBF8; color:#6150AA;">Intermediate</span>
+                <h4 class="prod-title" onclick="openProductModal('r3-violet')" title="Click to view full belt details &amp; dojo specs">Royal Violet Karate Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹340</span>
+                  <span class="mrp-price">₹420</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r3-violet')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3.3 -->
+            <div class="product-item" data-id="r3-lilac" data-name="Soft Lilac Kyu Belt" data-price="310" data-color="#B9A7E0">
+              <div class="prod-img-box" onclick="openProductModal('r3-lilac')" style="background:#F6F4FB;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#B9A7E0; color:#3A2A61;">
+                  <span class="stitch-line"></span><span>心</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#F1EDFA; color:#6C55A0;">Senior Kyu</span>
+                <h4 class="prod-title" onclick="openProductModal('r3-lilac')" title="Click to view full belt details &amp; dojo specs">Soft Lilac Kyu Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹310</span>
+                  <span class="mrp-price">₹380</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r3-lilac')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3.4 -->
+            <div class="product-item" data-id="r3-lavender" data-name="Pale Lavender Grade Belt" data-price="300" data-color="#E7D6F7">
+              <div class="prod-img-box" onclick="openProductModal('r3-lavender')" style="background:#F6F4FB;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#E7D6F7; color:#4B3374;">
+                  <span class="stitch-line"></span><span>練</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#F8F3FD; color:#6C449E;">Specialty</span>
+                <h4 class="prod-title" onclick="openProductModal('r3-lavender')" title="Click to view full belt details &amp; dojo specs">Pale Lavender Grade Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹300</span>
+                  <span class="mrp-price">₹360</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)" selected>Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)">Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r3-lavender')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================
+             ROW 4: CHARCOAL & GOLD MASTER COLLECTION
+             Colors: #2B2B2B, #D4A017, #F0C94C, #F7E7B5
+             ======================================================== -->
+        <div class="collection-row">
+          <div class="collection-header theme-charcoal">
+            <div class="col-title-meta">
+              <span class="col-pill">COLLECTION 04</span>
+              <h3>Row 4: Charcoal &amp; Gold Master Collection</h3>
+              <span class="col-sub">Black Belt 1st Dan Shodan, Master Dan ranks, gold embroidery &amp; senior honors</span>
+            </div>
+            <div class="swatches-strip">
+              <span class="swatch" style="background:#2B2B2B" title="#2B2B2B (Charcoal Black)"></span>
+              <span class="swatch" style="background:#D4A017" title="#D4A017 (Master Gold)"></span>
+              <span class="swatch" style="background:#F0C94C" title="#F0C94C (Bright Gold)"></span>
+              <span class="swatch" style="background:#F7E7B5" title="#F7E7B5 (Ivory Gold)"></span>
+            </div>
+          </div>
+
+          <div class="products-grid-4">
+            <!-- 4.1 -->
+            <div class="product-item" data-id="r4-black" data-name="Charcoal Black Belt (1st Dan Shodan)" data-price="650" data-color="#2B2B2B">
+              <div class="prod-img-box" onclick="openProductModal('r4-black')" style="background:#F2F2F2;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#2B2B2B; color:#D4A017; border:1px solid #111;">
+                  <span class="stitch-line"></span><span>初段</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#E5E5E5; color:#2B2B2B;">Black Belt 1st Dan</span>
+                <h4 class="prod-title" onclick="openProductModal('r4-black')" title="Click to view full belt details &amp; dojo specs">Charcoal Black Belt (Shodan)</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹650</span>
+                  <span class="mrp-price">₹850</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)">Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)" selected>Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r4-black')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4.2 -->
+            <div class="product-item" data-id="r4-gold" data-name="Master Gold Traditional Belt" data-price="850" data-color="#D4A017">
+              <div class="prod-img-box" onclick="openProductModal('r4-gold')" style="background:#FCF8EE;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#D4A017; color:#2B2B2B;">
+                  <span class="stitch-line"></span><span>師範</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#F8E8BE; color:#926C08;">Master Dan</span>
+                <h4 class="prod-title" onclick="openProductModal('r4-gold')" title="Click to view full belt details &amp; dojo specs">Master Gold Traditional Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹850</span>
+                  <span class="mrp-price">₹1,100</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)">Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)" selected>Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r4-gold')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4.3 -->
+            <div class="product-item" data-id="r4-ribbon" data-name="Bright Gold Honor Ribbon Belt" data-price="700" data-color="#F0C94C">
+              <div class="prod-img-box" onclick="openProductModal('r4-ribbon')" style="background:#FCF8EE;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#F0C94C; color:#2B2B2B;">
+                  <span class="stitch-line"></span><span>武徳</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#FCF1CE; color:#926C08;">Honor Award</span>
+                <h4 class="prod-title" onclick="openProductModal('r4-ribbon')" title="Click to view full belt details &amp; dojo specs">Bright Gold Ribbon Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹700</span>
+                  <span class="mrp-price">₹890</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)">Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)" selected>Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r4-ribbon')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4.4 -->
+            <div class="product-item" data-id="r4-ivory" data-name="Ivory Silk Embroidered Belt" data-price="950" data-color="#F7E7B5">
+              <div class="prod-img-box" onclick="openProductModal('r4-ivory')" style="background:#FCF8EE;" title="Click to view full belt details &amp; dojo specs">
+                <div class="belt-strap-real" style="background-color:#F7E7B5; color:#2B2B2B; border:1px solid #D4A017;">
+                  <span class="stitch-line"></span><span>無心</span><span class="stitch-line"></span>
+                </div>
+              </div>
+              <div class="prod-meta">
+                <span class="rank-tag" style="background:#FCF7E8; color:#7B5F14;">Custom Silk</span>
+                <h4 class="prod-title" onclick="openProductModal('r4-ivory')" title="Click to view full belt details &amp; dojo specs">Ivory Silk Embroidered Belt</h4>
+                <div class="prod-price-box">
+                  <span class="current-price">₹950</span>
+                  <span class="mrp-price">₹1,250</span>
+                </div>
+                <div class="size-select-row">
+                  <label>Size:</label>
+                  <select class="item-size-select">
+                    <option value="Size 2 (220 cm)">Size 2 (220 cm)</option>
+                    <option value="Size 3 (240 cm)">Size 3 (240 cm)</option>
+                    <option value="Size 4 (260 cm)" selected>Size 4 (260 cm)</option>
+                    <option value="Size 5 (280 cm)">Size 5 (280 cm)</option>
+                    <option value="Size 6 (300 cm)">Size 6 (300 cm)</option>
+                  </select>
+                </div>
+                <div class="action-buttons-group">
+                  <button type="button" class="btn-view-desc" onclick="openProductModal('r4-ivory')">
+                    <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    <span>View Details &amp; Specs</span>
+                  </button>
+                  <button class="btn btn-add-cart" onclick="addToCartFromCard(this)">
+                    + Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-wa-direct" onclick="buyViaWhatsApp(this, event)">
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOJO JOURNAL / BLOG SECTION -->
+    <section class="blog-section" id="blog">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-tag">DOJO JOURNAL</span>
+          <h2 class="section-heading">Training Articles &amp; Wisdom</h2>
+          <p class="section-desc">Practical guidance on karate etiquette, belt knots, and the mental discipline of Budo.</p>
+        </div>
+
+        <div class="blog-grid-3">
+          <!-- Post 1 -->
+          <article class="article-card">
+            <div class="article-thumb">
+              <img src="assets/images/blog-belt-tying.jpg" 
+                   alt="Authentic Karate Belt Tying &amp; Craftsmanship" loading="lazy">
+              <span class="article-tag">Gear Guide</span>
+            </div>
+            <div class="article-content">
+              <span class="article-date">5 min read &bull; Sensei SK Solaman</span>
+              <h3 class="article-title">The Proper Way to Tie and Care for Your Karate Belt (Obi)</h3>
+              <p class="article-snippet">
+                A traditional karate belt is never washed in boiling water or thrown carelessly. Here is how to achieve the square knot and maintain respect for your rank.
+              </p>
+              <button class="read-btn" onclick="openArticleModal('knot')">Read Article &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="article-card">
+            <div class="article-thumb">
+              <img src="assets/images/blog-zanshin-meditation.jpg" 
+                   alt="Zanshin Mindset and Dojo Meditation" loading="lazy">
+              <span class="article-tag">Philosophy</span>
+            </div>
+            <div class="article-content">
+              <span class="article-date">4 min read &bull; Sensei SK Solaman</span>
+              <h3 class="article-title">Understanding "Zanshin": The State of Unbroken Awareness</h3>
+              <p class="article-snippet">
+                Why our lineage under Zanshin Karate-Do Kai emphasizes calm presence before, during, and after executing every kata and kumite movement.
+              </p>
+              <button class="read-btn" onclick="openArticleModal('zanshin')">Read Article &rarr;</button>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="article-card">
+            <div class="article-thumb">
+              <img src="assets/images/blog-dojo-etiquette.jpg" 
+                   alt="Traditional Dojo Etiquette and Bowing Rei" loading="lazy">
+              <span class="article-tag">Dojo Rules</span>
+            </div>
+            <div class="article-content">
+              <span class="article-date">4 min read &bull; Barabelun Dojo</span>
+              <h3 class="article-title">Dojo Etiquette (Reigi): Essential Manners for New Students</h3>
+              <p class="article-snippet">
+                Karate begins with bowing and ends with bowing. A practical checklist for students and parents entering the Barabelun dojo for the first time.
+              </p>
+              <button class="read-btn" onclick="openArticleModal('reigi')">Read Article &rarr;</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SENSEI SPOTLIGHT -->
+    <section class="sensei-section" id="sensei">
+      <div class="container">
+        <div class="sensei-card-layout">
+          <div class="sensei-photo-col">
+            <img src="assets/images/sensei-portrait-kata.jpg" 
+                 alt="Sensei SK Solaman - Black Belt 1st Degree Japan" 
+                 class="sensei-photo-img" loading="lazy">
+            <div class="japan-seal">
+              <strong>JAPAN 1ST DAN</strong>
+              <span>Zanshin Karate-Do Kai</span>
+            </div>
+          </div>
+
+          <div class="sensei-info-col">
+            <span class="section-tag">CHIEF INSTRUCTOR</span>
+            <h2 class="sensei-name-head">Sensei SK Solaman</h2>
+            <p class="sensei-dan-line">
+              <strong>Black Belt 1st Degree from Japan</strong> &bull; Authorized Branch Head, Barabelun
+            </p>
+            <p class="sensei-short-bio">
+              Sensei SK Solaman established Barabelun Budo Martial Arts Academy to provide authentic Japanese Budo training. Certified under strict Japanese Dan examination standards, his training emphasizes precision kata mechanics, safe kumite sparring, and character discipline.
+            </p>
+
+            <div class="pillars-chips">
+              <span class="pill">✓ Real Self-Defense</span>
+              <span class="pill">✓ Confidence &amp; Posture</span>
+              <span class="pill">✓ Respect &amp; Etiquette</span>
+              <span class="pill">✓ Total Body Fitness</span>
+            </div>
+
+            <div class="sensei-btn-group">
+              <a href="https://wa.me/918515082913?text=Hello%20Sensei%20SK%20Solaman,%20I%20would%20like%20to%20consult%20you%20regarding%20Karate%20classes." target="_blank" rel="noopener" class="btn btn-teal">
+                Consult Sensei on WhatsApp
+              </a>
+              <span class="sensei-direct-phone">Direct Line: +91 8515082913</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING TIMETABLE & ADMISSION -->
+    <section class="schedule-section" id="schedule">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-tag">DOJO TIMETABLE</span>
+          <h2 class="section-heading">Weekly Training Schedule</h2>
+          <p class="section-desc">Morning and evening batches held at Barabelun Dojo.</p>
+        </div>
+
+        <div class="schedule-table-card">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Morning Batch</th>
+                <th>Evening (Kids &amp; Juniors)</th>
+                <th>Evening (Advanced &amp; Kumite)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monday</strong></td>
+                <td>6:30 AM &ndash; 7:45 AM</td>
+                <td>4:30 PM &ndash; 5:45 PM</td>
+                <td>6:00 PM &ndash; 7:30 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>6:30 AM &ndash; 7:45 AM</td>
+                <td>4:30 PM &ndash; 5:45 PM</td>
+                <td>6:00 PM &ndash; 7:30 PM</td>
+              </tr>
+              <tr>
+                <td><strong>Friday</strong></td>
+                <td>6:30 AM &ndash; 7:45 AM</td>
+                <td>4:30 PM &ndash; 5:45 PM</td>
+                <td>6:00 PM &ndash; 7:30 PM</td>
+              </tr>
+              <tr class="sunday-highlight">
+                <td><strong>Sunday</strong></td>
+                <td colspan="3"><strong>7:30 AM &ndash; 10:00 AM:</strong> Intensive Masterclass, Open Sparring &amp; Meditation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & ORDER INQUIRY -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <span class="section-tag">DOJO LOCATION</span>
+          <h3>Barabelun Budo Academy</h3>
+          <p class="contact-branch">Authorized Branch of Zanshin Karate-Do Kai</p>
+          <ul class="contact-points">
+            <li><strong>Location:</strong> Barabelun, West Bengal, India</li>
+            <li><strong>Sensei SK Solaman:</strong> +91 8515082913</li>
+            <li><strong>Store Support:</strong> Belts, Karate Dogi &amp; Safety Guards</li>
+          </ul>
+          <a href="https://wa.me/918515082913" target="_blank" rel="noopener" class="btn btn-teal btn-block">
+            Chat Directly on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-card form-card">
+          <span class="section-tag">ONLINE INQUIRY</span>
+          <h3>Send Admission / Order Inquiry</h3>
+          <form id="ecomInquiryForm" class="inquiry-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cName">Full Name</label>
+                <input type="text" id="cName" required placeholder="e.g. Rahul Sen" class="f-input">
+              </div>
+              <div class="form-group">
+                <label for="cType">Inquiry Type</label>
+                <select id="cType" class="f-input">
+                  <option value="Karate Belt Order">Karate Belt Order</option>
+                  <option value="Dojo Admissions">Dojo Admissions (Kids/Adults)</option>
+                  <option value="Uniform / Dogi Order">Uniform / Dogi Order</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Message / Size / Question</label>
+              <textarea id="cMsg" rows="2" placeholder="Mention size or questions for Sensei..." class="f-input"></textarea>
+            </div>
+            <button type="submit" class="btn btn-teal btn-block">
+              Submit via WhatsApp (+91 8515082913)
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SLIDE-OUT SHOPPING CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div class="cart-title-row">
+        <h3>Your Belt Cart</h3>
+        <span class="cart-items-tag" id="drawerCartCount">0 items</span>
+      </div>
+      <button class="close-cart-btn" onclick="closeCart()" aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items rendered dynamically -->
+      <div class="empty-cart-msg">
+        <p>Your cart is empty.</p>
+        <a href="#store" class="btn btn-outline btn-sm" onclick="closeCart()">Browse Belts</a>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <strong class="cart-subtotal-val" id="cartSubtotal">₹0</strong>
+      </div>
+      <p class="cart-shipping-note">Taxes included &bull; Fast dispatch from Barabelun Dojo</p>
+      <button class="btn btn-whatsapp-checkout btn-block" onclick="checkoutWhatsApp()">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.49 0-2.94-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.182 8.182 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23z"/>
+        </svg>
+        <span>Checkout via WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT DESCRIPTION MODAL (KNOW MORE ABOUT BELTS & DOJO) -->
+  <div class="product-modal-overlay" id="productModalOverlay" onclick="closeProductModal()"></div>
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-label="Product Details">
+    <button class="product-modal-close" onclick="closeProductModal()" aria-label="Close product details">&times;</button>
+    <div class="product-modal-body" id="productModalBody">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- BLOG ARTICLE MODAL -->
+  <div class="article-modal-overlay" id="articleModalOverlay" onclick="closeArticleModal()"></div>
+  <div class="article-modal" id="articleModal">
+    <button class="article-close-btn" onclick="closeArticleModal()">&times;</button>
+    <div class="article-modal-body" id="articleModalBody">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="f-title">Barabelun Budo Martial Arts Academy</span>
+        <span class="f-sub">Branch of Zanshin Karate-Do Kai &bull; Led by Sensei SK Solaman (1st Dan Japan)</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#store">Belt Store</a>
+        <a href="#blog">Dojo Journal</a>
+        <a href="#sensei">Sensei</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <div class="container">
+        &copy; <span id="fYear"></span> Barabelun Budo Martial Arts Academy &bull; Phone / WhatsApp: +91 8515082913
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLEAN FLOATING WHATSAPP BUTTON (NO NEON GLOW) -->
+  <a href="https://wa.me/918515082913?text=Hello%20Sensei,%20I%20am%20visiting%20the%20Barabelun%20Budo%20Store%20and%20would%20like%20to%20inquire%20about%20karate%20belts." 
+     class="floating-whatsapp-btn" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Direct WhatsApp message to Sensei SK Solaman">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.49 0-2.94-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.182 8.182 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
