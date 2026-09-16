@@ -176,11 +176,10 @@ body {
 }
 
 /* Explicit Pure White Light Theme Enforcement */
-:root,
 html[data-theme="light"],
+html[data-theme="light"] body,
 html:not([data-theme="dark"]),
-body[data-theme="light"],
-body:not([data-theme="dark"]) {
+html:not([data-theme="dark"]) body {
   background-color: #FFFFFF !important;
 }
 
@@ -211,6 +210,7 @@ html:not([data-theme="dark"]) .site-header {
 html[data-theme="dark"],
 html[data-theme="dark"] body {
   background-color: #0B111A !important;
+  color: #CBD5E1;
 }
 
 html[data-theme="dark"] .store-section,
@@ -223,6 +223,10 @@ html[data-theme="dark"] .hero-section,
 html[data-theme="dark"] .blog-section,
 html[data-theme="dark"] .schedule-section {
   background-color: #111B29 !important;
+}
+
+html[data-theme="dark"] .trust-strip {
+  background-color: #0F1824 !important;
 }
 
 html[data-theme="dark"] .site-footer,

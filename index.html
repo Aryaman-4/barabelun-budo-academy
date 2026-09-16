@@ -8,9 +8,13 @@
   <meta name="theme-color" content="#FFFFFF">
 
   <script>
+    let isThemeToggling = false;
     function applyTheme(theme) {
       const isDark = theme === 'dark';
       document.documentElement.setAttribute('data-theme', theme);
+      if (document.body) {
+        document.body.setAttribute('data-theme', theme);
+      }
       try { localStorage.setItem('barabelun_theme', theme); } catch (e) {}
 
       const desktopText = document.getElementById('themeToggleText');
@@ -21,16 +25,25 @@
       const desktopBtn = document.getElementById('themeToggleBtn');
       if (desktopBtn) {
         desktopBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
+        desktopBtn.setAttribute('aria-label', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
         desktopBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
       }
       const mobileBtn = document.getElementById('mobileThemeToggleBtn');
       if (mobileBtn) {
         mobileBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
+        mobileBtn.setAttribute('aria-label', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
         mobileBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
       }
     }
 
-    function toggleTheme() {
+    function toggleTheme(e) {
+      if (e && typeof e.preventDefault === 'function') {
+        e.preventDefault();
+      }
+      if (isThemeToggling) return;
+      isThemeToggling = true;
+      setTimeout(() => { isThemeToggling = false; }, 200);
+
       const current = document.documentElement.getAttribute('data-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       applyTheme(next);
@@ -52,7 +65,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=3.2">
+  <link rel="stylesheet" href="styles.css?v=3.5">
 </head>
 <body>
 
@@ -105,7 +118,7 @@
       <!-- Theme Switcher, Cart Button & Mobile Menu Toggle -->
       <div class="header-actions">
         <!-- Modern Theme Mode Switcher -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme" aria-pressed="false">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" onclick="toggleTheme(event)" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme" aria-pressed="false">
           <span class="theme-pill-track" aria-hidden="true">
             <span class="theme-pill-thumb">
               <span class="theme-icon theme-icon-sun">
@@ -153,7 +166,7 @@
         <li><a href="#contact" class="mobile-link">Dojo Admissions &amp; Contact</a></li>
         <li class="mobile-theme-row">
           <span class="mobile-theme-label">Appearance:</span>
-          <button class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggleBtn" onclick="toggleTheme()" aria-label="Toggle light and dark mode" aria-pressed="false">
+          <button class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggleBtn" type="button" onclick="toggleTheme(event)" aria-label="Toggle light and dark mode" aria-pressed="false">
             <span class="theme-pill-track" aria-hidden="true">
               <span class="theme-pill-thumb">
                 <span class="theme-icon theme-icon-sun">
@@ -1315,6 +1328,6 @@
     </svg>
   </a>
 
-  <script src="script.js?v=3.2"></script>
+  <script src="script.js?v=3.5"></script>
 </body>
 </html>

@@ -987,24 +987,32 @@ function initScrollSpy() {
 /* ==========================================================================
    THEME MODE CONTROLLER (LIGHT / DARK)
    ========================================================================== */
+let isThemeToggling = false;
+
 function initTheme() {
-  const savedTheme = localStorage.getItem('barabelun_theme') || 'light';
+  let savedTheme = 'light';
+  try {
+    savedTheme = localStorage.getItem('barabelun_theme') || 'light';
+  } catch (e) {}
   applyTheme(savedTheme);
 
   const desktopBtn = document.getElementById('themeToggleBtn');
   const mobileBtn = document.getElementById('mobileThemeToggleBtn');
 
   if (desktopBtn) {
-    desktopBtn.addEventListener('click', toggleTheme);
+    desktopBtn.onclick = toggleTheme;
   }
   if (mobileBtn) {
-    mobileBtn.addEventListener('click', toggleTheme);
+    mobileBtn.onclick = toggleTheme;
   }
 }
 
 function applyTheme(theme) {
   const isDark = theme === 'dark';
   document.documentElement.setAttribute('data-theme', theme);
+  if (document.body) {
+    document.body.setAttribute('data-theme', theme);
+  }
   try { localStorage.setItem('barabelun_theme', theme); } catch (e) {}
 
   // Update button labels to show current state
@@ -1020,22 +1028,30 @@ function applyTheme(theme) {
   // Update accessibility attributes & tooltips
   const desktopBtn = document.getElementById('themeToggleBtn');
   if (desktopBtn) {
-    desktopBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    desktopBtn.setAttribute('aria-label', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
     desktopBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
     desktopBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
 
   const mobileBtn = document.getElementById('mobileThemeToggleBtn');
   if (mobileBtn) {
-    mobileBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    mobileBtn.setAttribute('aria-label', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
     mobileBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
     mobileBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
 }
 
-function toggleTheme() {
+function toggleTheme(e) {
+  if (e && typeof e.preventDefault === 'function') {
+    e.preventDefault();
+  }
+  if (isThemeToggling) return;
+  isThemeToggling = true;
+  setTimeout(() => { isThemeToggling = false; }, 200);
+
   const current = document.documentElement.getAttribute('data-theme') || 'light';
   const next = current === 'dark' ? 'light' : 'dark';
   applyTheme(next);
 }
+
 
