@@ -1005,16 +1005,16 @@ function initTheme() {
 function applyTheme(theme) {
   const isDark = theme === 'dark';
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('barabelun_theme', theme);
+  try { localStorage.setItem('barabelun_theme', theme); } catch (e) {}
 
-  // Update button labels
+  // Update button labels to show current state
   const desktopText = document.getElementById('themeToggleText');
   const mobileText = document.getElementById('mobileThemeToggleText');
   if (desktopText) {
-    desktopText.textContent = isDark ? 'Light' : 'Dark';
+    desktopText.textContent = isDark ? 'Dark' : 'Light';
   }
   if (mobileText) {
-    mobileText.textContent = isDark ? 'Light' : 'Dark';
+    mobileText.textContent = isDark ? 'Dark' : 'Light';
   }
 
   // Update accessibility attributes & tooltips
@@ -1028,6 +1028,7 @@ function applyTheme(theme) {
   const mobileBtn = document.getElementById('mobileThemeToggleBtn');
   if (mobileBtn) {
     mobileBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    mobileBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
     mobileBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
 }

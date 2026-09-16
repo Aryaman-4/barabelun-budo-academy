@@ -8,9 +8,40 @@
   <meta name="theme-color" content="#FFFFFF">
 
   <script>
+    function applyTheme(theme) {
+      const isDark = theme === 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('barabelun_theme', theme); } catch (e) {}
+
+      const desktopText = document.getElementById('themeToggleText');
+      const mobileText = document.getElementById('mobileThemeToggleText');
+      if (desktopText) desktopText.textContent = isDark ? 'Dark' : 'Light';
+      if (mobileText) mobileText.textContent = isDark ? 'Dark' : 'Light';
+
+      const desktopBtn = document.getElementById('themeToggleBtn');
+      if (desktopBtn) {
+        desktopBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
+        desktopBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      }
+      const mobileBtn = document.getElementById('mobileThemeToggleBtn');
+      if (mobileBtn) {
+        mobileBtn.setAttribute('title', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
+        mobileBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    }
+
     (function() {
-      const savedTheme = localStorage.getItem('barabelun_theme') || 'light';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      let saved = 'light';
+      try {
+        saved = localStorage.getItem('barabelun_theme') || 'light';
+      } catch (e) {}
+      document.documentElement.setAttribute('data-theme', saved);
     })();
   </script>
 
@@ -21,7 +52,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3.2">
 </head>
 <body>
 
@@ -74,7 +105,7 @@
       <!-- Theme Switcher, Cart Button & Mobile Menu Toggle -->
       <div class="header-actions">
         <!-- Modern Theme Mode Switcher -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Switch between light and dark theme" title="Toggle Light / Dark Theme" aria-pressed="false">
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle light and dark theme" title="Toggle Light / Dark Theme" aria-pressed="false">
           <span class="theme-pill-track" aria-hidden="true">
             <span class="theme-pill-thumb">
               <span class="theme-icon theme-icon-sun">
@@ -90,7 +121,7 @@
               </span>
             </span>
           </span>
-          <span class="theme-toggle-text" id="themeToggleText">Dark</span>
+          <span class="theme-toggle-text" id="themeToggleText">Light</span>
         </button>
 
         <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="Open Shopping Cart">
@@ -122,7 +153,7 @@
         <li><a href="#contact" class="mobile-link">Dojo Admissions &amp; Contact</a></li>
         <li class="mobile-theme-row">
           <span class="mobile-theme-label">Appearance:</span>
-          <button class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggleBtn" aria-label="Toggle light and dark mode" aria-pressed="false">
+          <button class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggleBtn" onclick="toggleTheme()" aria-label="Toggle light and dark mode" aria-pressed="false">
             <span class="theme-pill-track" aria-hidden="true">
               <span class="theme-pill-thumb">
                 <span class="theme-icon theme-icon-sun">
@@ -138,7 +169,7 @@
                 </span>
               </span>
             </span>
-            <span class="theme-toggle-text" id="mobileThemeToggleText">Dark</span>
+            <span class="theme-toggle-text" id="mobileThemeToggleText">Light</span>
           </button>
         </li>
       </ul>
@@ -1284,6 +1315,6 @@
     </svg>
   </a>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3.2"></script>
 </body>
 </html>
