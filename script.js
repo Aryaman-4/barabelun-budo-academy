@@ -987,8 +987,6 @@ function initScrollSpy() {
 /* ==========================================================================
    THEME MODE CONTROLLER (LIGHT / DARK)
    ========================================================================== */
-let isThemeToggling = false;
-
 function initTheme() {
   let savedTheme = 'light';
   try {
@@ -1015,7 +1013,6 @@ function applyTheme(theme) {
   }
   try { localStorage.setItem('barabelun_theme', theme); } catch (e) {}
 
-  // Update button labels to show current state
   const desktopText = document.getElementById('themeToggleText');
   const mobileText = document.getElementById('mobileThemeToggleText');
   if (desktopText) {
@@ -1025,7 +1022,6 @@ function applyTheme(theme) {
     mobileText.textContent = isDark ? 'Dark' : 'Light';
   }
 
-  // Update accessibility attributes & tooltips
   const desktopBtn = document.getElementById('themeToggleBtn');
   if (desktopBtn) {
     desktopBtn.setAttribute('aria-label', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
@@ -1045,13 +1041,14 @@ function toggleTheme(e) {
   if (e && typeof e.preventDefault === 'function') {
     e.preventDefault();
   }
-  if (isThemeToggling) return;
-  isThemeToggling = true;
-  setTimeout(() => { isThemeToggling = false; }, 200);
+  if (window.__isThemeToggling) return;
+  window.__isThemeToggling = true;
+  setTimeout(() => { window.__isThemeToggling = false; }, 200);
 
   const current = document.documentElement.getAttribute('data-theme') || 'light';
   const next = current === 'dark' ? 'light' : 'dark';
   applyTheme(next);
 }
+
 
 

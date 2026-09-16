@@ -8,8 +8,9 @@
   <meta name="theme-color" content="#FFFFFF">
 
   <script>
-    let isThemeToggling = false;
-    function applyTheme(theme) {
+    window.__isThemeToggling = false;
+
+    window.applyTheme = function(theme) {
       const isDark = theme === 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       if (document.body) {
@@ -34,20 +35,20 @@
         mobileBtn.setAttribute('aria-label', isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme');
         mobileBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
       }
-    }
+    };
 
-    function toggleTheme(e) {
+    window.toggleTheme = function(e) {
       if (e && typeof e.preventDefault === 'function') {
         e.preventDefault();
       }
-      if (isThemeToggling) return;
-      isThemeToggling = true;
-      setTimeout(() => { isThemeToggling = false; }, 200);
+      if (window.__isThemeToggling) return;
+      window.__isThemeToggling = true;
+      setTimeout(() => { window.__isThemeToggling = false; }, 200);
 
       const current = document.documentElement.getAttribute('data-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-    }
+      window.applyTheme(next);
+    };
 
     (function() {
       let saved = 'light';
@@ -65,7 +66,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=3.5">
+  <link rel="stylesheet" href="styles.css?v=3.8">
 </head>
 <body>
 
@@ -1328,6 +1329,6 @@
     </svg>
   </a>
 
-  <script src="script.js?v=3.5"></script>
+  <script src="script.js?v=3.8"></script>
 </body>
 </html>
